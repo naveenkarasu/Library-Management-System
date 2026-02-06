@@ -13,6 +13,7 @@ import {
 } from '@/components/ui/table'
 import { formatDate } from '@/lib/utils'
 import { BookOpen, Users, BookCopy, AlertTriangle } from 'lucide-react'
+import { ReportChart3D } from '@/components/three/ReportChart3D'
 
 export function ReportsPage() {
   const { data: stats, isLoading: statsLoading } = useDashboardStats()
@@ -21,7 +22,7 @@ export function ReportsPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold text-stone-900">Reports</h1>
+        <h1 className="text-2xl font-bold text-teal-950">Reports</h1>
         <p className="text-sm text-muted-foreground mt-1">
           Library statistics and overdue book reports
         </p>
@@ -74,6 +75,14 @@ export function ReportsPage() {
             </CardContent>
           </Card>
         </div>
+      )}
+
+      {stats && (
+        <ReportChart3D
+          overdue={stats.overdueBooks ?? 0}
+          active={stats.activeIssues ?? 0}
+          returned={Math.max(0, (stats.totalCopies ?? 0) - (stats.availableCopies ?? 0) - (stats.activeIssues ?? 0))}
+        />
       )}
 
       <Card>

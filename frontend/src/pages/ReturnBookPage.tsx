@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Spinner } from '@/components/ui/spinner'
 import { useToast } from '@/components/ui/toast'
 import { Undo2 } from 'lucide-react'
+import { BookReturnAnim3D } from '@/components/three/BookReturnAnim3D'
 
 export function ReturnBookPage() {
   const { data: transactions, isLoading } = useActiveTransactions()
@@ -28,8 +29,10 @@ export function ReturnBookPage() {
 
   return (
     <div className="space-y-6">
+      <BookReturnAnim3D />
+
       <div>
-        <h1 className="text-2xl font-bold text-stone-900">Return Book</h1>
+        <h1 className="text-2xl font-bold text-teal-950">Return Book</h1>
         <p className="text-sm text-muted-foreground mt-1">
           Process book returns from library members
         </p>

@@ -45,15 +45,15 @@ export function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-stone-50 px-4 relative overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-teal-900 via-teal-800 to-teal-950 px-4 relative overflow-hidden">
       <FloatingBooks />
-      <Card className="w-full max-w-md">
-        <CardHeader className="text-center">
-          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-teal-100">
-            <Library className="h-6 w-6 text-teal-600" />
+      <Card className="w-full max-w-md relative z-10 shadow-2xl">
+        <CardHeader className="text-center bg-gradient-to-r from-teal-600 to-teal-700 text-white rounded-t-lg">
+          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gold-400/20">
+            <Library className="h-6 w-6 text-gold-300" />
           </div>
-          <CardTitle className="text-2xl">Library Management System</CardTitle>
-          <CardDescription>Sign in to your account to continue</CardDescription>
+          <CardTitle className="text-2xl text-white">Library Management System</CardTitle>
+          <CardDescription className="text-teal-100">Sign in to your account to continue</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">

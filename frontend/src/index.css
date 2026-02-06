@@ -4,30 +4,43 @@
 
 @layer base {
   :root {
-    --background: 60 9% 98%;
-    --foreground: 24 10% 10%;
+    --background: 166 76% 97%;
+    --foreground: 176 93% 10%;
     --card: 0 0% 100%;
-    --card-foreground: 24 10% 10%;
+    --card-foreground: 176 93% 10%;
     --popover: 0 0% 100%;
-    --popover-foreground: 24 10% 10%;
+    --popover-foreground: 176 93% 10%;
     --primary: 174 84% 32%;
     --primary-foreground: 60 9% 98%;
-    --secondary: 60 5% 96%;
-    --secondary-foreground: 24 10% 10%;
-    --muted: 60 5% 96%;
-    --muted-foreground: 24 6% 45%;
+    --secondary: 166 30% 96%;
+    --secondary-foreground: 176 93% 10%;
+    --muted: 166 30% 96%;
+    --muted-foreground: 168 12% 41%;
     --accent: 38 92% 50%;
-    --accent-foreground: 24 10% 10%;
+    --accent-foreground: 176 93% 10%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 60 9% 98%;
-    --border: 20 6% 90%;
-    --input: 20 6% 90%;
+    --border: 174 20% 88%;
+    --input: 174 20% 88%;
     --ring: 174 84% 32%;
     --radius: 0.5rem;
+    --surface: 166 76% 97%;
   }
 }
 
 @layer base {
   * { @apply border-border; }
-  body { @apply bg-background text-foreground; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-surface {
+    background-color: hsl(var(--surface));
+  }
+  .gradient-teal {
+    background: linear-gradient(135deg, #0d9488 0%, #134e4a 100%);
+  }
 }

@@ -4,6 +4,7 @@ import { useIssueBook } from '@/hooks/useTransactions'
 import { IssueBookForm } from '@/components/transactions/IssueBookForm'
 import { Spinner } from '@/components/ui/spinner'
 import { useToast } from '@/components/ui/toast'
+import { BookReturnAnim3D } from '@/components/three/BookReturnAnim3D'
 
 export function IssueBookPage() {
   const { data: books, isLoading: booksLoading } = useBooks()
@@ -31,8 +32,10 @@ export function IssueBookPage() {
 
   return (
     <div className="space-y-6">
+      <BookReturnAnim3D />
+
       <div>
-        <h1 className="text-2xl font-bold text-stone-900">Issue Book</h1>
+        <h1 className="text-2xl font-bold text-teal-950">Issue Book</h1>
         <p className="text-sm text-muted-foreground mt-1">
           Issue a book to a library member
         </p>

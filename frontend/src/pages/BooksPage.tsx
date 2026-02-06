@@ -105,7 +105,7 @@ export function BooksPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-stone-900">Books</h1>
+          <h1 className="text-2xl font-bold text-teal-950">Books</h1>
           <p className="text-sm text-muted-foreground mt-1">
             Manage the library book catalog
           </p>

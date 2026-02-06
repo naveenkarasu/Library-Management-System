@@ -16,6 +16,7 @@ import {
 import { useToast } from '@/components/ui/toast'
 import { Plus } from 'lucide-react'
 import type { Member, MemberFormData } from '@/types'
+import { MemberNetwork3D } from '@/components/three/MemberNetwork3D'
 
 export function MembersPage() {
   const { data: members, isLoading } = useMembers()
@@ -102,9 +103,11 @@ export function MembersPage() {
 
   return (
     <div className="space-y-6">
+      <MemberNetwork3D />
+
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-stone-900">Members</h1>
+          <h1 className="text-2xl font-bold text-teal-950">Members</h1>
           <p className="text-sm text-muted-foreground mt-1">
             Manage library members
           </p>
