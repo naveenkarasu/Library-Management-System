@@ -12,7 +12,12 @@ const queryClient = new QueryClient({
 async function enableMocking() {
   if (import.meta.env.VITE_DEMO_MODE !== 'true') return
   const { worker } = await import('./mocks/browser')
-  return worker.start({ onUnhandledRequest: 'bypass' })
+  return worker.start({
+    onUnhandledRequest: 'bypass',
+    serviceWorker: {
+      url: `${import.meta.env.BASE_URL}mockServiceWorker.js`,
+    },
+  })
 }
 
 enableMocking().then(() => {
