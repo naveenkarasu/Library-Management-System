@@ -21,7 +21,7 @@ export function ReportsPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold text-slate-900">Reports</h1>
+        <h1 className="text-2xl font-bold text-stone-900">Reports</h1>
         <p className="text-sm text-muted-foreground mt-1">
           Library statistics and overdue book reports
         </p>
@@ -36,7 +36,7 @@ export function ReportsPage() {
               <CardTitle className="text-sm font-medium text-muted-foreground">
                 Total Books
               </CardTitle>
-              <BookOpen className="h-4 w-4 text-blue-600" />
+              <BookOpen className="h-4 w-4 text-teal-600" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{stats?.totalBooks ?? 0}</div>
@@ -64,7 +64,7 @@ export function ReportsPage() {
               <CardTitle className="text-sm font-medium text-muted-foreground">
                 Active Issues
               </CardTitle>
-              <BookCopy className="h-4 w-4 text-amber-600" />
+              <BookCopy className="h-4 w-4 text-gold-600" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{stats?.activeIssues ?? 0}</div>

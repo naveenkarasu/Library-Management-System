@@ -82,9 +82,9 @@ function BookMesh({
           distanceFactor={6}
           style={{ pointerEvents: 'none' }}
         >
-          <div className="bg-slate-900 text-white px-3 py-2 rounded-lg shadow-xl text-xs whitespace-nowrap">
+          <div className="bg-teal-900 text-white px-3 py-2 rounded-lg shadow-xl text-xs whitespace-nowrap">
             <div className="font-semibold">{book.title}</div>
-            <div className="text-slate-300">{book.author}</div>
+            <div className="text-teal-200">{book.author}</div>
             <div className="mt-1 text-xs">
               <span
                 className="inline-block w-2 h-2 rounded-full mr-1"
@@ -173,7 +173,7 @@ function Bookshelf({ books, onBookClick }: BookShelf3DProps) {
 
 export function BookShelf3D({ books, onBookClick }: BookShelf3DProps) {
   return (
-    <div className="w-full h-[450px] bg-gradient-to-b from-slate-100 to-slate-200 rounded-xl overflow-hidden border">
+    <div className="w-full h-[450px] bg-gradient-to-b from-stone-100 to-stone-200 rounded-xl overflow-hidden border">
       <Canvas
         camera={{ position: [0, 0, 5], fov: 50 }}
         shadows
@@ -202,15 +202,15 @@ export function BookShelf3D({ books, onBookClick }: BookShelf3DProps) {
 
       {/* Legend */}
       <div className="flex justify-center gap-6 -mt-10 relative z-10 pb-3">
-        <div className="flex items-center gap-1.5 text-xs text-slate-600 bg-white/80 backdrop-blur rounded px-2 py-1">
+        <div className="flex items-center gap-1.5 text-xs text-stone-600 bg-white/80 backdrop-blur rounded px-2 py-1">
           <span className="w-2.5 h-2.5 rounded-full bg-green-500" />
           Available
         </div>
-        <div className="flex items-center gap-1.5 text-xs text-slate-600 bg-white/80 backdrop-blur rounded px-2 py-1">
+        <div className="flex items-center gap-1.5 text-xs text-stone-600 bg-white/80 backdrop-blur rounded px-2 py-1">
           <span className="w-2.5 h-2.5 rounded-full bg-yellow-500" />
           Low Stock
         </div>
-        <div className="flex items-center gap-1.5 text-xs text-slate-600 bg-white/80 backdrop-blur rounded px-2 py-1">
+        <div className="flex items-center gap-1.5 text-xs text-stone-600 bg-white/80 backdrop-blur rounded px-2 py-1">
           <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
           Checked Out
         </div>

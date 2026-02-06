@@ -39,7 +39,7 @@ export function IssueBookForm({ books, members, onSubmit, isLoading }: IssueBook
     <Card className="max-w-lg">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <BookPlus className="h-5 w-5 text-indigo-600" />
+          <BookPlus className="h-5 w-5 text-teal-600" />
           Issue a Book
         </CardTitle>
         <CardDescription>

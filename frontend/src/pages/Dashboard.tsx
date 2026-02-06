@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Spinner } from '@/components/ui/spinner'
 import { BookShelf3D } from '@/components/three/BookShelf3D'
+import { StatsRing3D } from '@/components/three/StatsRing3D'
 import { useDashboardStats } from '@/hooks/useReports'
 import { useBooks } from '@/hooks/useBooks'
 import { BookOpen, Users, BookPlus, AlertTriangle } from 'lucide-react'
@@ -14,8 +15,8 @@ export function Dashboard() {
       title: 'Total Books',
       value: stats?.totalBooks ?? 0,
       icon: BookOpen,
-      color: 'text-blue-600',
-      bg: 'bg-blue-50',
+      color: 'text-teal-600',
+      bg: 'bg-teal-50',
     },
     {
       title: 'Total Members',
@@ -28,8 +29,8 @@ export function Dashboard() {
       title: 'Active Issues',
       value: stats?.activeIssues ?? 0,
       icon: BookPlus,
-      color: 'text-amber-600',
-      bg: 'bg-amber-50',
+      color: 'text-gold-600',
+      bg: 'bg-gold-50',
     },
     {
       title: 'Overdue Books',
@@ -43,7 +44,7 @@ export function Dashboard() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold text-slate-900">Dashboard</h1>
+        <h1 className="text-2xl font-bold text-stone-900">Dashboard</h1>
         <p className="text-sm text-muted-foreground mt-1">
           Overview of library statistics and book inventory
         </p>
@@ -69,6 +70,28 @@ export function Dashboard() {
             </Card>
           ))}
         </div>
+      )}
+
+      {stats && (
+        <Card>
+          <CardHeader>
+            <CardTitle>Library Overview</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <StatsRing3D stats={{
+              totalBooks: stats.totalBooks ?? 0,
+              totalMembers: stats.totalMembers ?? 0,
+              activeIssues: stats.activeIssues ?? 0,
+              overdueBooks: stats.overdueBooks ?? 0,
+            }} />
+            <div className="flex justify-center gap-6 mt-4 text-xs">
+              <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-full bg-teal-500" /> Books</span>
+              <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-full bg-green-500" /> Members</span>
+              <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-full bg-amber-500" /> Issues</span>
+              <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-full bg-red-500" /> Overdue</span>
+            </div>
+          </CardContent>
+        </Card>
       )}
 
       <Card>

@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Library } from 'lucide-react'
+import { FloatingBooks } from '@/components/three/FloatingBooks'
 
 export function LoginPage() {
   const navigate = useNavigate()
@@ -44,11 +45,12 @@ export function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-50 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-stone-50 px-4 relative overflow-hidden">
+      <FloatingBooks />
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100">
-            <Library className="h-6 w-6 text-indigo-600" />
+          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-teal-100">
+            <Library className="h-6 w-6 text-teal-600" />
           </div>
           <CardTitle className="text-2xl">Library Management System</CardTitle>
           <CardDescription>Sign in to your account to continue</CardDescription>

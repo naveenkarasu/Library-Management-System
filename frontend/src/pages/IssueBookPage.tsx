@@ -32,7 +32,7 @@ export function IssueBookPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold text-slate-900">Issue Book</h1>
+        <h1 className="text-2xl font-bold text-stone-900">Issue Book</h1>
         <p className="text-sm text-muted-foreground mt-1">
           Issue a book to a library member
         </p>

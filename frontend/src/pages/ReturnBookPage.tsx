@@ -29,7 +29,7 @@ export function ReturnBookPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold text-slate-900">Return Book</h1>
+        <h1 className="text-2xl font-bold text-stone-900">Return Book</h1>
         <p className="text-sm text-muted-foreground mt-1">
           Process book returns from library members
         </p>
@@ -38,7 +38,7 @@ export function ReturnBookPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Undo2 className="h-5 w-5 text-indigo-600" />
+            <Undo2 className="h-5 w-5 text-teal-600" />
             Active Transactions
           </CardTitle>
           <CardDescription>
